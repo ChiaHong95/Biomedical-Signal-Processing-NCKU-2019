@@ -31,3 +31,11 @@ This repo includes homework from Professor Sheng-Fu Liang's Biomedical Signal Pr
         > 4. compute z-domain transfer function/coefficient and normalize
         > 5. convolution
     - also compare the results with the results of the **lowpass filter** (16-points moving average)
+    
+    
+- HW4 to-dos (goal: the Pan-Tompkins method):
+    - implement **[the Pan-Tompkins method](https://en.wikipedia.org/wiki/Pan%E2%80%93Tompkins_algorithm)** for QRS detection
+        > Pan-Tomplins algorithm is based on analysis of the slope, amplitude, and width of QRS complexes. It includes a series of bandpass (lowpass+high pass), derivative, squaring, integration, adaptive thresholding & search procedures.
+    - compute average heart rate and QRS width
+    - implement the **adaptive thresholding** and searchback procedure to your P-T method and redo above step (refer to lecture note HW4/BSP-6(lecture).pdf)
+    - Apply the P-T method to personal ECG
