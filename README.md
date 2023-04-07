@@ -17,3 +17,17 @@ This repo includes homework from Professor Sheng-Fu Liang's Biomedical Signal Pr
     - apply **three-point central-difference** to ECG data (reduce low frequency noise, detrending), compare noise level (RMS) before and after, and calculate BPM. 
         > The three-point central-difference: taking the average of two successive output value of firstorder difference operator. It represents a bandpass filter. In MATLAB implementation, we use convolution to achieve, `y = conv(ecg, h)`, with impulse response `h = 0.5[-1, 0, 1]`.
  
+ - HW3 to-dos (goal: Wiener filtering using different desired/optimal signal):
+    - design a **Wiener filter** to remove the artifacts in the ECG signal (**Wiener Hopf** equation for optimal filter coefficients)
+    ![](https://i.imgur.com/vkUD8Fq.png)
+
+        > If a representation of the desired signal is available, then the Wiener filters can be applied. The Wiener filter theory is to minimize the difference between the filtered output and some desired output.
+    - create a **piece-wise linear model** of the desired version of the signal by concatenating linear segments to provide P, QRS, and T waves similar to the given ECG signal
+    - redo the above steps by using the ECG filtered by the **Comb filter** as the template (desired signal)
+        > 梳形濾波器，用於濾除一系列等間距的頻率(harmonics)
+        > 1. analyze power spectra (FFT) of the ECG
+        > 2. find the frequencies with peak amplitude
+        > 3. in the **zplane**, put **Zeros** at those frequencies (a frequency can calculate a pair of Zeros site)
+        > 4. compute z-domain transfer function/coefficient and normalize
+        > 5. convolution
+    - also compare the results with the results of the **lowpass filter** (16-points moving average)
