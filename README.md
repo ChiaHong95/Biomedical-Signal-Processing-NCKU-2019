@@ -39,3 +39,11 @@ This repo includes homework from Professor Sheng-Fu Liang's Biomedical Signal Pr
     - compute average heart rate and QRS width
     - implement the **adaptive thresholding** and searchback procedure to your P-T method and redo above step (refer to lecture note HW4/BSP-6(lecture).pdf)
     - Apply the P-T method to personal ECG
+
+
+- HW5 to-dos (goals: PCA analysis):
+    - Use **PCA** (Principle Component Analysis) to analyze the EEG data
+        > PCA transforms a set of correlated variables into a new set of uncorrelated variables that are called principal components (PCs). In addition to being uncorrelated, the PCs are orthogonal and are ordered in terms of the variability they represent.
+    - analyze **covariance matrix** in each channel and 10 PC
+    - calculate how many PCs are needed to contain 85% variance
+    - Observe the relationship between the **eigenvector coefficient** and the channel
