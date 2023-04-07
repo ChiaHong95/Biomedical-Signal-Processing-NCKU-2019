@@ -1,0 +1,22 @@
+clear;close all;
+ecg=load('ecg_lfn.dat');
+fs=1000;
+h=[1 0 -1];
+y=conv(ecg,h);
+t=(1:length(ecg))/fs;
+figure;subplot(211);plot(t,ecg);
+RMS1=rms(ecg);
+ylabel('Original ECG');xlabel('Time in seconds');
+title(['noise level with RMS= ',num2str(RMS1)]);
+subplot(212);plot(t,y(1:9519));
+RMS2=rms(y(1:9519));
+ylabel('Filtered ECG');xlabel('Time in seconds');
+title(['noise level with RMS= ',num2str(RMS2)]);
+
+[pks,loc]=findpeaks(y(1:9519),'minpeakheight',0.45,'minpeakdistance',100);
+loc=loc/fs;
+figure;
+plot(t,y(1:9519),loc,pks,'rx');
+ylabel('Filtered ECG');xlabel('Time in seconds');
+beat=(length(loc)*60/t(end));
+title(['BPM of the signal= ',num2str(beat),' /min']);
