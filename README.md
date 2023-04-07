@@ -19,7 +19,7 @@ This repo includes homework from Professor Sheng-Fu Liang's Biomedical Signal Pr
  
  - HW3 to-dos (goal: Wiener filtering using different desired/optimal signal):
     - design a **Wiener filter** to remove the artifacts in the ECG signal (**Wiener Hopf** equation for optimal filter coefficients)
-    ![](https://i.imgur.com/vkUD8Fq.png)
+    <img src="https://i.imgur.com/vkUD8Fq.png" height="400" />
 
         > If a representation of the desired signal is available, then the Wiener filters can be applied. The Wiener filter theory is to minimize the difference between the filtered output and some desired output.
     - create a **piece-wise linear model** of the desired version of the signal by concatenating linear segments to provide P, QRS, and T waves similar to the given ECG signal
