@@ -44,6 +44,6 @@ This repo includes homework from Professor Sheng-Fu Liang's Biomedical Signal Pr
 - HW5 to-dos (goals: PCA analysis):
     - Use **PCA** (Principle Component Analysis) to analyze the EEG data
         > PCA transforms a set of correlated variables into a new set of uncorrelated variables that are called principal components (PCs). In addition to being uncorrelated, the PCs are orthogonal and are ordered in terms of the variability they represent.
-    - analyze **covariance matrix** in each channel and 10 PC
+    - analyze **covariance matrix** in each channel and 10 PCs
     - calculate how many PCs are needed to contain 85% variance
     - Observe the relationship between the **eigenvector coefficient** and the channel
