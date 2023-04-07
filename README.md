@@ -15,5 +15,5 @@ This repo includes homework from Professor Sheng-Fu Liang's Biomedical Signal Pr
     - perform **autocorrelation** and **cross-correlation** on frontal and occipital EEG data
         > [Autocorrelation](https://www.investopedia.com/terms/a/autocorrelation.asp) represents the degree of similarity between a given time series and a lagged version of itself over successive time intervals. Autocorrelation measures the relationship between a variable's current value and its past values.
     - apply **three-point central-difference** to ECG data (reduce low frequency noise, detrending), compare noise level (RMS) before and after, and calculate BPM. 
-        > The three-point central-difference: taking the average of two successive output value of firstorder difference operator. It represents a bandpass filter. In MATLAB implementation we use convolution to achieve `y = conv(ecg, h)` with impulse response `h(n) = 0.5[-1, 0, 1]`.
+        > The three-point central-difference: taking the average of two successive output value of firstorder difference operator. It represents a bandpass filter. In MATLAB implementation, we use convolution to achieve, `y = conv(ecg, h)`, with impulse response `h(n) = 0.5[-1, 0, 1]`.
  
